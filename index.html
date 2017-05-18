@@ -86,8 +86,24 @@ p.Logo{
   font-size: 40px;
   letter-spacing: -3px;
   position: fixed;
-  bottom: 16px;
+  bottom: 20px;
   left: 30px;
+  cursor: default;
+}
+p.Logo0{
+  position: fixed;
+  bottom: 20px;
+  left: 370px;
+  cursor: default;
+}
+p.eta_index{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+
+  position: fixed;
+  bottom: 20px;
+  right: 60px;
   cursor: default;
 }
 
@@ -258,10 +274,10 @@ Links
 *******************************************************************/
 
 a{color: white; padding-left: 15px} a:hover{text-decoration: none; color: white}
-
+a.eta_index:hover{color: #E0E7EB; transition: color .2s}
 a.Gnutrino{color: #aaa}
 a.Gnutrino:hover{color: #E0E7EB; transition: color .2s}
-a.Quasar:hover{color: #aaa; transition: color .2s}
+a.Quasar:hover{color: #E0E7EB; transition: color .2s}
 
 
 </style>
@@ -449,9 +465,25 @@ a.Quasar:hover{color: #aaa; transition: color .2s}
   </script>
 
   <!-- Logo -->
-  <p class="Logo">
-    hilix <span style="font-size:16px; letter-spacing:1px; color:grey; padding-left:0px">RT / Luqman Malik, CEO <img src="pp.png" style="margin:0 0 0 80px"></span>
-  </p>
+  <table>
+    <tr>
+      <td>
+        <p class="Logo">
+          hilix <span style="font-size:16px; letter-spacing:1px; color:grey; padding-left:0px">RT / Luqman Malik, CEO</span>
+        </p>
+      </td>
+      <td>
+        <p class="Logo0">
+          <img src="pp.png">
+        </p>
+      </td>
+      <td>
+        <p class="eta_index">
+          <a class="eta_index" href="eta_index.pdf">The &eta;-index: A Theory of Assessment in the Formal Sciences</a>
+        </p>
+      </td>
+    </tr>
+  </table>
 
 <!-- Bootstrap links -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
