@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+<link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+  <title>Moire Effect</title>
+<style>
+body {
+  overflow:visible;
+  font-family: 'Abel';
+  font-size:14px;
+  margin:50px 200px 50px 50px;
+  color:gray;
+}
+.wrapper {
+  width: 200px;
+  height: 200px;
+  margin:30px 50px 50px; 
+  box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.35);
+}
+div {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: rotate(20deg);
+  background-image: 
+	repeating-linear-gradient(transparent, transparent 5px, gray 5px, gray 7px);
+  animation: 120s rot linear infinite;
+}
+div.two {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: rotate(20deg);
+  background-image: 
+	repeating-linear-gradient(transparent, transparent 5px, lightgray 5px, gray 7px);
+  animation: 120s rot linear infinite;
+}
+@keyframes rot {
+  0% { transform: rotate(20deg); }
+  100% { transform: rotate(380deg); }
+}
+</style>
+</head>
+<body>
+<h1>The Moir&eacute; Effect</h1>
+In geometry, Moir&eacute; patterns are large-scale interference patterns that 
+are generated when opague-ruled patterns with transparent gaps are
+inlaid with similar patterns. For this moir&eacute; interferencing to occur, 
+the two patterns must not be completely identical, but rather e.g. displaced, 
+rotated, or posess slightly different pitch. Below, we will create a circular,
+rotating moir&eacute;-disc, using purely HTML/CSS.
+<section>
+<h3>Background</h3>
+We begin by creating a disc, placing stripes on it, and rotating it at speed 
+<em style="font-family:Times">s</em>, as follows:
+<div class="wrapper"></div>
+Next, we produce another set of stripes, inlay them with the first, and
+rotate them slowly and slightly out of phase; as such:
+<div class="wrapper">
+  <div></div>
+</div>
+We continue stacking layers (seven in total) and rotating them slightly 
+out of phase with each other. Finally, we obtain an animated 
+Moir&eacute;-disc.
+</section>
+<section>
+<h3>The Animation</h3>
+<div class="wrapper">
+  <div>
+    <div>
+      <div>
+	<div>
+	  <div>
+	    <div>
+	      <div></div>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section>
+<h3>The Mathematics</h3>
+<p>
+The rendered patterns can be thought of as a system of composite
+trigonometric-graphs, where we are stacking graphs that are slightly
+out of phase.
+</p>
+<p>
+We start with
+<math>
+<mi>y</mi>
+<mi>=</mi>
+<mtxt>sin</mtxt>
+<mi>(</mi>
+<mi>x</mi>
+<mo>-</mo>
+<mn>20</mn>
+<mi>&deg;</mi>
+<mi>)</mi>
+<mtxt>&period;</mtxt>
+</math> 
+<br>
+<br>
+<b>Continue reading &rarr;<b>
+</section>
+</body>
+</html>
