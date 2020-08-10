@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hilix Research &middot; Luqman Malik</title>
+<title>Luqman Malik</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -111,31 +111,7 @@ p.eta_index{
   Blackwell quote
 *******************************************************************/
 
-p.Blackwell {
-  color: white;
-  background-color: none;
-  font-size: 45px;
-  font-family: 'Open Sans';
-  text-align: center;
-  position: fixed;
-  top: 180px;
-  right: 200px;
-  letter-spacing: -0.5px;
-  cursor:default
-  }
 
-p.Blackwelle {
-  color: white;
-  background-color: none;
-  font-size: 45px;
-  font-family: 'Open Sans';
-  text-align: center;
-  position: fixed;
-  top: 380px;
-  right: 200px;
-  letter-spacing: -0.5px;
-  cursor:default
-  }
 
 
 /*******************************************************************
@@ -144,11 +120,12 @@ p.Blackwelle {
 
 hr.style-two {
   position: fixed;
-  top:-20px;
+
   right:325px;
+  top: -20px;
   width: 50%;
     border: 0;
-    height: 626px;
+    height: 100%;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
 }
 
@@ -158,7 +135,7 @@ hr.style-two {
 
 .btn-login {
   color: grey;
-  font-size: 20px;
+  font-size: 15px;
   background-color: transparent;
   border:none;
   box-shadow: 0 0 0 white;
@@ -170,6 +147,24 @@ hr.style-two {
 
 }
 .btn-login:hover {
+  color: lightgrey;
+  box-shadow: 0 0 0 white;
+  transition: color .1s;
+}
+.btn-login0 {
+  color: grey;
+  font-size: 15px;
+  background-color: transparent;
+  border:none;
+  box-shadow: 0 0 0 white;
+  font-family: 'Avenir', 'light';
+  margin-top:-5px;
+  margin-left: 0px;
+  position:fixed;
+  right:20px; top:45px;
+
+}
+.btn-login0:hover {
   color: lightgrey;
   box-shadow: 0 0 0 white;
   transition: color .1s;
@@ -278,73 +273,29 @@ a.eta_index:hover{color: #E0E7EB; transition: color .2s}
 a.Gnutrino{color: #aaa}
 a.Gnutrino:hover{color: #E0E7EB; transition: color .2s}
 a.Quasar:hover{color: #E0E7EB; transition: color .2s}
-
-
 </style>
 </head>
 
 
 <!-- _________________________ Body / HTML ___________________________ -->
-
-<!-- Cover Art Sources: -->
-<!-- Icosohedron (src): http://www.shapeways.com/product/VNTTYH52H/great-stellated-dodecahedron?optionId=40273064&li=user-profile -->
-<!-- Grey Waves: <a href="http://www.freepik.com/free-vector/modern-background-with-wavy-shapes_927328.htm">Designed by Freepik</a> -->
-<!-- Source: Fiona Struengmann | Series: Articulated Silence — White Mountain 2012: http://www.fionastruengmann.com/pictures/ -->
-
 <body style="text-align:center; width:100%">
-
-  <!-- Background -->
-  <img src="cover_left.png" style="position:fixed; top:45px; left:0px">
-  <img src="Sadako1_struengmann.jpg" style="position:fixed; top:0px; left:640px"> 
-  
-
   <!-- Filter -->
   <hr class="style-two">
-
-  <!-- Menue -->
-  <div style="position:fixed; left:18.5%; top:5%; font-family:'Open Sans'; font-size: 30px; color:#aaa">
-    <a class="Gnutrino" href="#">Research</a>
+  <div align="left">
+      <image src="MathematicsTutor2WEB.pdf">
   </div>
-  <div style="position:fixed; right:17.9%; top:5%; font-family:'Open Sans'; font-size: 30px; color:white">
-    <a class="Quasar" href="http://luqmanmalik.com/hrt">Technologies</a>
-  </div>
-
   <!-- Center trapazoid -->
-  <div style="position:fixed; top:120px; width:100%; height:430px; background: #EAF5F5; opacity:.3"></div>
-
-  <!-- Blackwell quote -->
-  <p class="Blackwell">
-    <canvas id="myCanvas" width="200" height="500"></canvas>
-    <script>
-      var c = document.getElementById("myCanvas");
-      var ctx = c.getContext("2d");
-      // Create gradient
-      var grd = ctx.createLinearGradient(0,0,200,0);
-      grd.addColorStop(0,"#f2f2f2");
-      grd.addColorStop(1,"#aaa");
-      // Fill with gradient
-      ctx.fillStyle = grd;
-      ctx.fillRect(10,10,150,80);
-    </script>
-  </p>
-  <p class="Blackwelle">
-    <canvas id="myCanvase" width="200" height="500"></canvas>
-    <script>
-      var c = document.getElementById("myCanvase");
-      var ctx = c.getContext("2d");
-      // Create gradient
-      var grd = ctx.createLinearGradient(0,0,200,0);
-      grd.addColorStop(0,"#f2f2f2");
-      grd.addColorStop(1,"#aaa");
-      // Fill with gradient
-      ctx.fillStyle = grd;
-      ctx.fillRect(10,10,150,80);
-    </script>
-  </p>
+  <div style="position:fixed; top:150px; width:100%; height:430px; background: #EAF5F5; opacity:.3; text-align: left; padding:2% 2% 0 45%">I am currently accepting mathematics and computer science students of all ages. I will provide weekly support with Core Standards curricula for K-12 students in Bay Area school districts. I also cover the undergraduate expository-aparatus of the University of California math and cs departments, including Springer UTM, Spivak, Stewart, Axler, Wolfram, and more. Putnam contenders and Olympians are welcome!
+      <br>
+      <br>
+      My primary assumption, for pre-college students is  is that the learnrer will be or is attending a major college or University in the Bay Area.
+  </div>
+  <image src="profile_pic.png" style="position:fixed; top:41%; right:25%">
 
   <!-- Login -->
   <!-- Trigger / Open The Modal -->
-  <button id="libtn" class="btn-login">&#160</button>
+  <button id="libtn" class="btn-login">Tutoring</button>
+  <button id="libtn" class="btn-login0">Software</button>
 
   <!-- The Modal -->
   <div id="myModal" class="modal">
@@ -465,30 +416,5 @@ a.Quasar:hover{color: #E0E7EB; transition: color .2s}
       }
     }
   </script>
-
-  <!-- Logo -->
-  <table style="width:100%">
-    <tr>
-      <td>
-        <p class="Logo">
-          hilix <span style="font-size:16px; letter-spacing:1px; color:grey; padding-left:0px">RT / Luqman Malik, Founder</span>
-        </p>
-      </td>
-      <td>
-        <p class="Logo0">
-          <img src="pp.png">
-        </p>
-      </td>
-      <td>
-        <p class="eta_index">
-          <a class="eta_index" href="eta_index.pdf">The &eta;-index: A Theory of Assessment in the Formal Sciences</a>
-        </p>
-      </td>
-    </tr>
-  </table>
-
-<!-- Bootstrap links -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
