@@ -15,7 +15,16 @@
 /*******************************************************************
 Menue
 *******************************************************************/
-
+body {
+    text-align:center; width:100%;
+}
+p.a:first-letter {
+    float: left;
+    font-size: 60px;
+    line-height: 1;
+    font-weight: bold;
+    margin-right: 9px;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -278,24 +287,24 @@ a.Quasar:hover{color: #E0E7EB; transition: color .2s}
 
 
 <!-- _________________________ Body / HTML ___________________________ -->
-<body style="text-align:center; width:100%">
+<body>
   <!-- Filter -->
   <hr class="style-two">
   <div align="left">
       <image src="MathematicsTutor2WEB.pdf">
   </div>
   <!-- Center trapazoid -->
-  <div style="position:fixed; top:150px; width:100%; height:430px; background: #EAF5F5; opacity:.3; text-align: left; padding:2% 2% 0 45%">I am currently accepting mathematics and computer science students of all ages. I will provide weekly support with Core Standards curricula for K-12 students in Bay Area school districts. I also cover the undergraduate expository-aparatus of the University of California math and cs departments, including Springer UTM, Spivak, Stewart, Axler, Wolfram, and more. Putnam contenders and Olympians are welcome!
-      <br>
-      <br>
-      My primary assumption, for pre-college students is  is that the learnrer will be or is attending a major college or University in the Bay Area.
+  <div style="position:fixed; top:150px; left:42.5%; width:57.4%; height:100%; background: #EAF5F5; opacity:.3; text-align: left; padding:2% 2% 0 2.4%">
+      <p class="a">
+      <span style="font-family:times; italic; font-style:italic;">i</span> am currently accepting mathematics, computers, and engineering students. I provide weekly support with Core Standards for K-12ers in Bay Area school districts. I also cover Cal, Stanford, and Cal Tech undergraduate math, electrical engineering, and, computer science. Check out Alameda Math Group and Alameda Math Circle to find program information. All Alameda-based Putnam contenders and Olympians are welcome! My primary assumption, for pre college students is  is that the learnrer will be or is attending a major college or University in the Bay Area.
+      </p>
   </div>
-  <image src="profile_pic.png" style="position:fixed; top:41%; right:25%">
+  <image src="profile.png" style="position:fixed; top:37.5%; left:44.7%">
 
   <!-- Login -->
   <!-- Trigger / Open The Modal -->
-  <button id="libtn" class="btn-login">Tutoring</button>
-  <button id="libtn" class="btn-login0">Software</button>
+  <button id="libtn" class="btn-login">Alameda Mathematics Group</button>
+  <button id="libtn" class="btn-login0">Alameda Math Circle</button>
 
   <!-- The Modal -->
   <div id="myModal" class="modal">
