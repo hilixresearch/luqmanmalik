@@ -51,7 +51,7 @@
       padding: 14px 16px;
       text-decoration: none;
     }
-
+    .material-icons:hover{color:#85929E; transition: color .3s; cursor:pointer;}
     li a:hover, .dropdown:hover .dropbtn {
       background-color: lightgrey;
       transition: background .2s;
@@ -299,9 +299,23 @@
           <p class="a">LUQMAN MALIK</p>
           <p style="font-weight:bold; font-size:12px; margin:0px;">LS UTILITIES-RETAILER</p>
           <p style="font-size:11px">Communications, Energy, Electronic Security</p>
-          
       </div>
-      <image src="profile-2.png" style="position:fixed; box-shadow: 2px 2px 2px #4444; left:42.5%; top:32%;"></image>
+      <table>
+          <tr>
+              <td>
+              <image src="profile-2.png" style="position:fixed; box-shadow: 2px 2px 2px #4444; left:42.5%; top:32%;"></image></td>
+          </tr>
+          <tr>
+              <td style="position:fixed; left:46%; top:62%; color:gray;"><span class="material-icons">
+                  call
+                  </span><span class="material-icons" style="padding-left:2px">
+                      smartphone
+                      </span><span class="material-icons" style="padding-left:3px">
+                          email
+                          </span>
+              </td>
+              </tr>
+      </table>
       <!-- Login -->
       <!-- Trigger / Open The Modal -->
       <button id="libtn" class="btn-login">ADT</button>
