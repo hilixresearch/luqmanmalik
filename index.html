@@ -163,6 +163,7 @@
         font-size:20px;
         color: grey;
         margin-left:13.5%;
+        padding:50px;
         border: 1px solid #fefefe;
         border-radius: 0%;
         width: 75%;
@@ -174,8 +175,8 @@
     .close {
         color: #001a33;
         float: right;
-        padding-right: 30px;
-        padding-top: 25px;
+        
+        
         font-size: 13px;
     }
     .close:hover,
@@ -189,26 +190,25 @@
     *******************************************************************/
 
     input[type=text] {
-        width: 46%;
+        width: 40%;
         box-sizing: border-box;
         border: 1px solid #f2f2f2;
-        border-radius: 0px;
+        border-radius: 5px;
         font-size: 14px;
         background-color: #f2f2f2;
         padding: 12px 20px 12px 40px;
         margin-left: 20px;
-        margin-top: 60px;
+        
     }
     input[type=password] {
-        width: 82.4%;
+        width: 40%;
         box-sizing: border-box;
         border: 1px solid #f2f2f2;
         border-radius: 0px;
         font-size: 14px;
         background-color: #f2f2f2;
         padding: 12px 20px 12px 40px;
-        position: absolute;
-        left: 55px;
+        
         margin-top: 5px;
     }
     input[type=button] {
@@ -287,16 +287,27 @@
         <!-- Modal content -->
         <div class="modal-content">
           <span class="close" style="font-weight:normal">x</span>
-                <p>
+
                   <div class="container">
                     <div class="main">
                       <form id="form_id" method="post" name="myform">
-                        <!-- Username -->
-                        <input  type="text" name="username" id="username" placeholder="Email address">
-                          <!-- Password reset -->
-                          <div style="font-size:12px; margin-top: 20px; padding-right:110px">Password Reset ?</div>
-                        <!--  Password -->
-                        <input type="password" name="password" id="password" placeholder="Password">
+                          <table style="width:100%; border-collapse:collapse;">
+                              <tr>
+                                  <td>
+                        <td>Register for promotional offers</td>
+                        <td>
+                            <!-- Username -->
+                            <input  type="text" name="username" id="username" placeholder="Name">
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>Hello</td>
+                        <td>
+                            <!--  Password -->
+                            <input type="password" name="password" id="password" placeholder="Email">
+                        </td>
+                        </tr>
+                        </table>
                           <div  align="left" style="margin:0 0 0 65px;">
                             <!-- Remember me -->
                             <label  class="checkbox" style="font-size:12px; font-weight:normal; width:20%">
@@ -310,7 +321,7 @@
                       </form>
                     </div>
                   </div>
-                </p>
+                
           </div>
       </div>
       <!-- ______________________________ JS ____________________________ -->
@@ -383,7 +394,7 @@
           var username = document.getElementById("username").value;
           var password = document.getElementById("password").value;
           if ( username == "luqmanmalik@hilix.org" && password == "Pie.14159"){
-            window.location = "http://localhost:8888/Hilix/Dashboard/dashboard.html"; // Redirecting to other page.
+            window.location = "http://localhost:8888/Hilix/Dashboard/dashboard.html"; // Redirecting to target page.
           return false;
           }
           else{
