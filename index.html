@@ -263,6 +263,8 @@
         shape-rendering: crispEdges;
         fill: url(#MyGradient);
     }
+    .RSSP{padding-top:2px;}
+    .RSSP:hover{color:#5D6D7E; transition:.2s;}
     </style>
     </head>
     <!-- _____________________________________ Body / HTML_____________________________________________ ___________________________________________________________________________________________ -->
@@ -320,7 +322,7 @@
                           <table>
                               <tr>
                                 <td style="width:20%; padding-left:2%; font-size:20px; font-weight:bold; color:gray;">
-                                    <a href="https://www.q-cells.us/na/main/products/solar_panels/US_CANADA/residential/residential09.html" target="_blank">
+                                    <a href="https://www.q-cells.us/na/main/products/solar_panels/US_CANADA/residential/residential09.html" title="QCELLS | Q.ANTUM" target="_blank">
                                         Q.PEAK DUO BLK ML-G9+
                                     </a>
                                     <div style="font-size:12px; font-weight:normal;">Rebates + gratis inverters on all system installations.</div>
@@ -339,14 +341,15 @@
                                             <stop offset="95%" stop-color="#3333" />
                                           </linearGradient>
                                         </defs>
-                                    
-                                    <polygon stroke="none" fill="url('#myGradient')" points="95,10 95,120 185,130 185,0"/>
-                                    <polygon stroke="none" fill="url('#myGradient')" points="185,0 185,130 190,125 190,5"/>
-                                    <!--Lateral shift-->
-                                    <polygon stroke="none" fill="url('#myGradient')" points="150,10 150,120 240,130 240,0"/>
-                                    <polygon stroke="none" fill="url('#myGradient')" points="240,0 240,130 245,125 245,5"/>
-                                    
-                                    <line x1="15" y1="119" x2="95" y2="119" stroke="#EAF2F8"/>
+                                    <!-- Module 1-->
+                                    <polygon stroke="none" fill="url('#myGradient')" points="65,10 65,140 155,150 155,0"/>
+                                    <polygon stroke="none" fill="url('#myGradient')" points="155,0 155,151 160,146 160,5"/>
+                                    <!-- Module 2 -->
+                                    <polygon stroke="none" fill="url('#myGradient')" points="120,10 120,140 200,150 200,0"/>
+                                    <polygon stroke="none" fill="url('#myGradient')" points="200,0 200,151 205,146 205,5"/>
+                                    <!-- Module 3-->
+                                    <polygon stroke="none" fill="url('#myGradient')" points="175,10 175,140 255,150 255,0"/>
+                                    <polygon stroke="none" fill="url('#myGradient')" points="255,0 255,151 260,146 260,5"/>
                                   </svg>
                                 </td>
                                   <td>
@@ -376,14 +379,15 @@
                               </tr>
                           </table>
                           <!-- Remember me -->
-                          <div  align="left">
-                            <label  class="checkbox" style="font-size:12px; font-weight:normal; width:20%">
-                              <input type="checkbox" value="remember-me" id="remember_me">Promotional notifications
+                          <div  align="left" title="Track promotions">
+                            <label  class="checkbox" style="font-size:12px; font-weight:normal; width:6%">
+                              <input type="checkbox" value="remember-me" id="remember_me">
+                                  <div class="RSSP">RSS promos</div>
                             </label>
                           </div>
                         <!-- Login -->
                         <div style="margin:1% 0 0 0;">
-                          <input type="button" value="Request demo" id="submit" onclick="validate()"/>
+                          <input type="button" value="Schedule demo" id="submit" onclick="validate()"/>
                         </div>
                       </form>
                     </div>
