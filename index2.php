@@ -48,7 +48,7 @@
       left: 50%;
       transform: translate(-50%, 0);
       top: -20px;
-      width: 80%;
+      width: 60%;
         border: 0;
         height: 120%;
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.005), rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.005));
@@ -61,11 +61,13 @@
     .btn-login {
       color: gray;
       font-size: 12px;
+      text-align:center;
       background-color: #f9f9f9;
       border:1px solid transparent;
-      box-shadow: 2px 2px 2px lightgray;
+      box-shadow: 0 0 0 white;
       font-family: 'Avenir heavy';
       padding:15px 15px 15px 15px;
+      margin-right: 0px;
       float:center;
       opacity:0.8;
       width:20%;
@@ -78,11 +80,13 @@
     .btn-login0 {
       color: gray;
       font-size: 12px;
-      background-color: #f8f8f8;
+      text-align:center;
+      background-color: #f9f9f9;
       border:1px solid transparent;
-      box-shadow: 0px 2px 2px lightgray;
+      box-shadow: 0 0 0 white;
       font-family: 'Avenir heavy';
       padding:15px 15px 15px 15px;
+      margin-right:0px;
       float:left;
       opacity:0.8;
       width:20%;
@@ -95,9 +99,10 @@
     .btn-login1 {
       color: gray;
       font-size: 12px;
+      text-align:center;
       background-color: #f9f9f9;
       border:1px solid transparent;
-      box-shadow: 2px 2px 2px lightgray;
+      box-shadow: 0 0 0 white;
       font-family: 'Avenir heavy';
       padding:15px 15px 15px 20px;
       margin-right: 0px;
@@ -113,9 +118,10 @@
     .btn-login2 {
       color: gray;
       font-size: 12px;
+      text-align:center;
       background-color: #f9f9f9;
       border:1px solid transparent;
-      box-shadow: 2px 2px 2px lightgray;
+      box-shadow: 0 0 0 white;
       font-family: 'Avenir heavy';
       padding:15px 15px 15px 15px;
       float:left;
@@ -187,7 +193,7 @@
         box-sizing: border-box;
         border: 1px solid #e9e9e9;
         border-radius: 5px;
-        font-size: 13px;
+        font-size: 14px;
         background-color: #f8f8f8;
         padding: 12px 20px 12px 40px;
         margin:10px;
@@ -199,7 +205,7 @@
         box-sizing: border-box;
         border: 1px solid #e9e9e9;
         border-radius: 5px;
-        font-size: 13px;
+        font-size: 14px;
         background-color: #f8f8f8;
         padding: 12px 20px 12px 40px;
         margin:10px;
@@ -221,8 +227,8 @@
         width:81%;
         height:100px;
         border:1px solid #f9f9f9;
-        border-radius:3px; background-color:#f8f8f8;
-        font-size:13px;
+        border-radius:5px; background-color:#f8f8f8;
+        font-size:14px;
         color: #34495E;
         padding: 20px 20px 12px 40px;
     }
@@ -285,14 +291,14 @@
               <image src="profile-2.png" style="box-shadow: 2px 2px 2px #4444; margin-bottom:2%; border-radius:2%;"></image>
           </div>
           <div style="margin:1% 0 1% 0; text-align:center;">
-              <span class="material-icons" style="-webkit-user-select:none; font-size:30px; color:#618DAA; border:1px solid #e9e9e9; border-radius:50%; padding:10px; background:linear-gradient(white,#f1f1f1); box-shadow:0px 1px 3px 1px #4444; cursor:default;" title="" onMouseOver="this.style.color='#7FB3D5'"
+              <span class="material-icons" style="-webkit-user-select:none; font-size:30px; color:#618DAA; border:1px solid #e9e9e9; border-radius:50%; padding:10px; background:linear-gradient(white,#f1f1f1); box-shadow:0px 1px 3px 1px #4444; cursor:default;" title="CBSIS | Security Specialist" onMouseOver="this.style.color='#7FB3D5'"
                   onMouseOut="this.style.color='#618DAA'">add_moderator
               </span>
-              <span class="material-icons" style="-webkit-user-select:none; margin-left:10px; font-size:30px; color:#618DAA; border:1px solid #e9e9e9; border-radius:50%; padding:10px; background:linear-gradient(white,#f1f1f1); box-shadow:0px 1px 3px 1px #4444; cursor:default;" title=""
+              <span class="material-icons" style="-webkit-user-select:none; margin-left:10px; font-size:30px; color:#618DAA; border:1px solid #e9e9e9; border-radius:50%; padding:10px; background:linear-gradient(white,#f1f1f1); box-shadow:0px 1px 3px 1px #4444; cursor:default;" title="IBM | PRF Certified"
                   onMouseOver="this.style.color='#7FB3D5'"
                       onMouseOut="this.style.color='#618DAA'">admin_panel_settings
               </span>
-              <span class="material-icons" style="-webkit-user-select:none; margin-left:10px; font-size:30px; color:#618DAA; border:1px solid #e9e9e9; border-radius:50%; padding:10px; background:linear-gradient(white,#f1f1f1); box-shadow:0px 1px 3px 1px #4444; cursor:default;" title=""
+              <span class="material-icons" style="-webkit-user-select:none; margin-left:10px; font-size:30px; color:#618DAA; border:1px solid #e9e9e9; border-radius:50%; padding:10px; background:linear-gradient(white,#f1f1f1); box-shadow:0px 1px 3px 1px #4444; cursor:default;" title="SEC | Accredited"
                   onMouseOver="this.style.color='#7FB3D5'"
                       onMouseOut="this.style.color='#618DAA'" >policy
               </span>
@@ -366,33 +372,39 @@
                                   </td>
                               </tr>
                               <tr>
-                                  <td style="width:40%;">&nbsp;</td>
+                                  <td style="width:40%">&nbsp;</td>
                                   <td>
                                       <!-- Username -->
                                       <input  type="text" name="username" id="username" placeholder="Email Address">
                                   </td>
                               </tr>
                               <tr>
-                                  <td style="width:40%; background: linear-gradient(135deg, #EAF2F8 60%, silver);">&nbsp;</td>
+                                  <td style="width:40%">&nbsp;</td>
                                   <td>
                                       <form action="mailto:luqmalik@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm">
                                           <input type="text" name="ContactName" placeholder="Telephone Number">
-                                          <div style="margin:2.5% 0 5% 2%;">
+                                          <div style="margin:2.5% 0 2% 2%;">
                                               <textarea name="ContactCommentt" rows="6" cols="20" placeholder="System Specifications"></textarea>
-                                              <p style="font-size:10px;"><a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a></p>
+                                          </div>
+                                          <div  align="left">
+                                            <label  class="checkbox" style="font-size:12px; font-weight:normal; width:6%">
+                                              <input type="checkbox" value="remember-me" id="remember_me">
+                                                  <div class="RSSP" title="Track promotions">RSS promos</div>
+                                                  <input type="submit" value="Request demo"/>
+                                            </label>
                                           </div>
                                       </form>
                                   </td>
                               </tr>
+                              <tr>
+                                  <th>&nbsp;</th>
+                                  <th>
+                                      <a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a>
+                                  </th>
+                              </tr>
                           </table>
                           <!-- Remember me -->
-                          <div  align="left">
-                            <label  class="checkbox" style="font-size:12px; font-weight:normal; width:6%">
-                              <input type="checkbox" value="remember-me" id="remember_me">
-                                  <div class="RSSP" title="Track promotions">RSS promos</div>
-                                  <input type="submit" value="Request demo"/>
-                            </label>
-                          </div>
+                         
                         <!-- Login -->
                     
                       </form>
