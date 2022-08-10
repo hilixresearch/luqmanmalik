@@ -7,8 +7,10 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/52965fe3f4.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <style type="text/css">
+    <script src="https://kit.fontawesome.com/52965fe3f4.js" crossorigin="anonymous"></script>
     <script src="js/login.js"></script>
       
 
@@ -20,11 +22,14 @@
     }
     body {
         color:gray;
+        background-image: url();
         background:#f8f8f8; cursor:default;
         background-repeat: no-repeat;
     }
+    .TCPP{color:white;}
+    .TCPP:hover{transition: color .5s; text-decoration:none; text-shadow:1px 1px 2px gray;}
     p.a:first-letter {
-        color:#618DAA;
+        color:#5C94BD;
         float: top;
         font-size: 60px;
         line-height: 1;
@@ -35,10 +40,13 @@
         border-bottom:1px solid gray;
     }
     /*******************************************************************
-    Material Icons
+    Material Icons / Font_Awesome
     *******************************************************************/
+    .material-icons{font-size:150%;}
     .material-icons:hover{color:#5D6D7E; transition: color .3s; cursor:pointer;}
-
+    
+    .iconify{font-size:130%;}
+    .iconify:hover{color:#5D6D7E; transition: color .3s; cursor:pointer;}
     /*******************************************************************
       Filter
     *******************************************************************/
@@ -57,72 +65,18 @@
     /*******************************************************************
       LOGIN BUTTON / Trigger
     *******************************************************************/
-
-    .btn-login {
+    .modal-button {
       color: gray;
-      font-size: 12px;
+      font-size: 11px;
       background-color: #f9f9f9;
       border:1px solid transparent;
-      box-shadow: 2px 2px 2px lightgray;
-      font-family: 'Avenir heavy';
-      padding:15px 15px 15px 15px;
-      float:center;
-      opacity:0.8;
-      width:20%;
-    }
-    .btn-login:hover {
-        color:#538BCB;
-        background:#EBF5FB;
-        transition: color .5s;
-    }
-    .btn-login0 {
-      color: gray;
-      font-size: 12px;
-      background-color: #f8f8f8;
-      border:1px solid transparent;
-      box-shadow: 0px 2px 2px lightgray;
-      font-family: 'Avenir heavy';
+      font-family: 'Avenir' semi-bold;
       padding:15px 15px 15px 15px;
       float:left;
       opacity:0.8;
       width:20%;
     }
-    .btn-login0:hover {
-        color:#538BCB;
-        background:#EBF5FB;
-        transition: color .5s;
-    }
-    .btn-login1 {
-      color: gray;
-      font-size: 12px;
-      background-color: #f9f9f9;
-      border:1px solid transparent;
-      box-shadow: 2px 2px 2px lightgray;
-      font-family: 'Avenir heavy';
-      padding:15px 15px 15px 20px;
-      margin-right: 0px;
-      float:left;
-      opacity:0.8;
-      width:20%;
-    }
-    .btn-login1:hover {
-        color:#538BCB;
-        background:#EBF5FB;
-        transition: color .5s;
-    }
-    .btn-login2 {
-      color: gray;
-      font-size: 12px;
-      background-color: #f9f9f9;
-      border:1px solid transparent;
-      box-shadow: 2px 2px 2px lightgray;
-      font-family: 'Avenir heavy';
-      padding:15px 15px 15px 15px;
-      float:left;
-      opacity:0.8;
-      width:20%;
-    }
-    .btn-login2:hover {
+    .modal-button:hover {
         color:#538BCB;
         background:#EBF5FB;
         transition: color .5s;
@@ -135,7 +89,7 @@
         display: none; /* Hidden by default */
         position: absolute; /* Stay in place */
         z-index: 1; /* Sit on top */
-        padding-top: 3.1%; /* Location of the box */
+        padding-top: 2%; /* Location of the box */
         left: 0;
         top: 0;
         width: 100%; /* Full width */
@@ -147,17 +101,17 @@
     /* Modal Content */
     .modal-content {
         position:fixed;
-        top:20%;
-        background-color: #fefefe;
+        top:17%;
+        background: linear-gradient(lightgray, #fefefe);
         font-family:"Avenir", "Light";
         font-size:20px;
         color: gray;
         margin-left:13.5%;
         padding:5%;
-        border: 1px solid #fefefe;
-        border-radius: 0%;
+        border: 1px solid none;
+        border-radius: 0;
         width: 75%;
-        height:75%;
+        height:77%;
         opacity: .95555555;
         border-radius:5px;
     }
@@ -165,7 +119,7 @@
     .close {
         font-weight:normal;
         position:fixed;
-        top:24.5%;
+        top:22%;
         right:15%;
         color: #001a33;
         font-size: 13px;
@@ -177,6 +131,16 @@
         text-decoration: none;
         cursor: default;
     }
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+    }
+
+    @keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+    }
     /*******************************************************************
       LOGIN FORM
     *******************************************************************/
@@ -185,14 +149,22 @@
         width: 80%;
         color: #34495E;
         box-sizing: border-box;
-        border: 1px solid #e9e9e9;
-        border-radius: 5px;
+        text-shadow:1px 1px 1px silver;
+        border: 1px solid transparent;
+        border-radius: 3px;
         font-size: 13px;
         background-color: #f8f8f8;
         padding: 12px 20px 12px 40px;
-        margin:10px;
+        margin:5px 10px 0px 20px;
     }
-    input[type=text]:hover{border-color:#D6EAF8; background-color:#EAF2F8; transition:.4s; cursor:default;}
+    input[type=text]:hover{
+        color:#6B97B9;
+        text-shadow:none;
+        border:1px solid transparent;
+        background-color:#EAF2F8;
+        transition:.4s;
+        cursor:default;
+    }
     input[type=password] {
         width: 80%;
         color: #34495E;
@@ -202,29 +174,31 @@
         font-size: 13px;
         background-color: #f8f8f8;
         padding: 12px 20px 12px 40px;
-        margin:10px;
+        margin:10px 10px 10px 20px;
     }
     input[type=password]:hover{border-color:#D6EAF8; background-color:#EAF2F8; transition:.4s; cursor:default;}
     input[type=submit] {
       color: grey;
       font-size: 13px;
       background: linear-gradient(#f9f9f9, #f1f1f1);
-      padding: 10px 20px;
+      padding: 10px 20px 10px 25px;
       border: 1px solid transparent;
       box-shadow: 1px 1px 1px lightgray;
       border-radius: 3px;
+      margin:10px 10px 10px 20px;
     }
     input[type=submit]:hover{
-        background: #f8f8f8; border: 1px solid #f5f5f5;
+        text-decoration:underline; background: #f8f8f8; border: 1px solid #f5f5f5;
     }
     textarea{
-        width:81%;
+        width:81.5%;
         height:100px;
         border:1px solid #f9f9f9;
         border-radius:3px; background-color:#f8f8f8;
         font-size:13px;
         color: #34495E;
         padding: 20px 20px 12px 40px;
+        margin:10px 10px 10px 10px;
     }
     a{color:gray;}
     a:hover{
@@ -243,7 +217,7 @@
         text-align: left;
         padding:5%;
         box-shadow: 2px 2px 2px #4444;
-        border-radius:1%;
+        border-radius:.7%;
     }
     table, th, td {
     }
@@ -264,171 +238,393 @@
         shape-rendering: crispEdges;
         fill: url(#MyGradient);
     }
-    .RSSP{padding:2px 0 5px 0;}
-    .RSSP:hover{color:#5D6D7E; transition:.2s;}
+    .RSSP{font-family:Arial; font-size:11px; padding:2px 0 5px 0;}
+    .RSSP:hover{color:#527B9B; text-shadow: 2px 2px 5px lightgray; transition:.2s;}
     .SF{font-family:American Typewriter; font-size:11px; color:#626567}
+    textarea{resize:none; text-shadow:1px 1px 1px silver;}
+    textarea:hover{
+        color:#6B97B9;
+        border:1px solid transparent;
+        background-color:#EAF2F8;
+        transition:.4s;
+        cursor:default;
+        text-shadow:none;
+    }
+    .prod-specs:hover{text-shadow:2px 2px 5px lightgray;}
+    .intel-CATs{color:white; margin-left:25px; cursor:pointer;}
+    .intel-CATs:hover{color:#88BCDF}
+    radialGradient#radialGradient{
+        cx:171.2081px;
+        cy:196.85463px;
+        r:200px;
+    }
+    :not(svg),
+    :not(foreignObject) > svg{
+        transform-origin-x: 0px;
+        transform-origin-y: 0px;
+        transform-box: view-box;
+    }
+    .strikediag {
+      background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
+    }
     </style>
     </head>
     <!-- _____________________________________ Body / HTML_____________________________________________ ___________________________________________________________________________________________ -->
     <body>
       <!--<a href="" style="font-size:8px; position:fixed; margin:33% 0 0 3%; color:#CACFD2;">Fiona Str&uuml;ngmann</a>-->
       <!-- Filter -->
-      <image src="background.jpg" style="margin:0; position:fixed;"></image>
       <hr class="style-two">
       <!-- Center trapazoid -->
       <div class="trapazoid">
           <div style="margin:0 1% 0 0;" align="center">
-          <p class="a" style="font-family:Avenir Next medium; margin-right:4.5%;">LUQMAN MALIK</p>
-          <p style="font-weight:bold; font-size:12px; margin:0px; margin-right:2%;">TECHNOLOGIES RETAILER</p>
-          <p style="font-size:11px; line-height:12px;">Communications, Energy, Security</p>
-          
-              <image src="profile-2.png" style="box-shadow: 2px 2px 2px #4444; margin-bottom:2%; border-radius:2%;"></image>
+              <div style="margin-left:37.5%;">
+                <p class="a" style="font-family:Avenir Next medium;text-align:left;">LUQMAN MALIK</p>
+                <div style="color:#9FA8AF; font-size:11px; text-align:left;">
+                    Power and Energy, Enterprise Technologies<br>
+                    Information Technology, Machine Learning
+                </div>
+                <div style="font-size:10px;text-align:left;margin-bottom:7px;">IEEE97735109 | SECAI-00</div>
+              </div>
+              <image src="profile.jpeg" style="box-shadow: 1px 1px 10px gray; margin-bottom:2%; border-radius:2%;"></image>
           </div>
-          <div style="margin:1% 0 1% 0; text-align:center;">
-              <span class="material-icons" style="-webkit-user-select:none; font-size:30px; color:#618DAA; border:1px solid #e9e9e9; border-radius:50%; padding:10px; background:linear-gradient(white,#f1f1f1); box-shadow:0px 1px 3px 1px #4444; cursor:default;" title="" onMouseOver="this.style.color='#7FB3D5'"
-                  onMouseOut="this.style.color='#618DAA'">add_moderator
-              </span>
-              <span class="material-icons" style="-webkit-user-select:none; margin-left:10px; font-size:30px; color:#618DAA; border:1px solid #e9e9e9; border-radius:50%; padding:10px; background:linear-gradient(white,#f1f1f1); box-shadow:0px 1px 3px 1px #4444; cursor:default;" title=""
-                  onMouseOver="this.style.color='#7FB3D5'"
-                      onMouseOut="this.style.color='#618DAA'">admin_panel_settings
-              </span>
-              <span class="material-icons" style="-webkit-user-select:none; margin-left:10px; font-size:30px; color:#618DAA; border:1px solid #e9e9e9; border-radius:50%; padding:10px; background:linear-gradient(white,#f1f1f1); box-shadow:0px 1px 3px 1px #4444; cursor:default;" title=""
-                  onMouseOver="this.style.color='#7FB3D5'"
-                      onMouseOut="this.style.color='#618DAA'" >policy
-              </span>
-          </div>
-          <div style="width:100%; color:gray; padding:2% 0 0 0.7%; text-align:center;">
+<!--          <div style="margin:1% 0 1% 0; text-align:center;">-->
+<!--              <span class="material-icons" style="-webkit-user-select:none; font-size:30px; color:#618DAA; border:1px solid #e9e9e9; border-radius:50%; padding:10px; background:linear-gradient(white,#f1f1f1); box-shadow:0px 1px 3px 1px #4444; cursor:default;" title="IEEE IOT" onMouseOver="this.style.color='#7FB3D5'"-->
+<!--                  onMouseOut="this.style.color='#618DAA'">add_moderator-->
+<!--              </span>-->
+<!--              <span class="material-icons" style="-webkit-user-select:none; margin-left:10px; font-size:30px; color:#618DAA; border:1px solid #e9e9e9; border-radius:50%; padding:10px; background:linear-gradient(white,#f1f1f1); box-shadow:0px 1px 3px 1px #4444; cursor:default;" title="IBM Z"-->
+<!--                  onMouseOver="this.style.color='#7FB3D5'"-->
+<!--                      onMouseOut="this.style.color='#618DAA'">admin_panel_settings-->
+<!--              </span>-->
+<!--              <span class="material-icons" style="-webkit-user-select:none; margin-left:10px; font-size:30px; color:#618DAA; border:1px solid #e9e9e9; border-radius:50%; padding:10px; background:linear-gradient(white,#f1f1f1); box-shadow:0px 1px 3px 1px #4444; cursor:default;" title="C-INC"-->
+<!--                  onMouseOver="this.style.color='#7FB3D5'"-->
+<!--                      onMouseOut="this.style.color='#618DAA'" >policy-->
+<!--              </span>-->
+<!--          </div>-->
+          <div style="width:100%; color:gray; padding:0 0 0 0.7%; text-align:center;">
               <a href="tel:+15105206506"><span class="material-icons" title="Office">call</span></a>
               <a href="tel:+15103843628"><span class="material-icons" title="Mobile">smartphone</span></a>
-              <a href="mailto:luqmalik@gmail.com"><span class="material-icons" title="Email">email</span></a>
+              <a href="mailto:luqmanmalik@att.net"><span class="material-icons" title="Email">email</span></a>
+              <a href=""><span class="material-icons" title="RSS">rss_feed</span></a>
+              <a href="" title="Vimeo"><span class="iconify" data-icon="mdi:vimeo"></span></a>
               <br>
-              <span class="SF">San Francisco, CALIFORNIA</span>
+              <span class="SF">San Francisco, New York</span>
+          </div>
+          <div style="margin:16% 0 0 0; font-size:10px; color:white;">
+              <table style="background:none; width:100%">
+                  <tr>
+                      <td>Watters & Francis Grp.</td>
+                      <td style="text-align:right;">Meredith.ai</td>
+                  </tr>
+              </table>
           </div>
       </div>
-      <!-- Login -->
-      <!-- Trigger / Open The Modal -->
-      <button id="libtn" class="btn-login">QCELSS</button>
-      <button id="libtn" class="btn-login0">ADT</button>
-      <button id="libtn" class="btn-login1">AT&T</button>
-      <button id="libtn" class="btn-login2">IBM</button>
-      <!-- The Modal -->
-      <div id="myModal" class="modal">
-
-        <p align="center" style="color:white; font-family: 'Open Sans', sans-serif; font-size:40px">QCELLS</p>
-
-        <p align="center" style="color:#D6EAF8; font-family:'Avenir', 'light'; cursor:default;">MODULES
-          <span style="color:white; margin-left:25px; cursor:pointer;">INVERTERS</span>
-          <span style="color:white; margin-left:25px; cursor:pointer;">BATTERIES</span>
+      <!-- Ad-Pages -->
+      <!-- Trigger Buttons / open The Modal -->
+      <button class="modal-button" href="#myModal1">INTEL</button>
+      <!-- The Modal 1-->
+      <div id="myModal1" class="modal">
+        <p align="center" style="color:white; font-family: 'Open Sans', sans-serif; font-size:40px">intel</p>
+        <p align="center" style="color:#88BCDF; font-family:'Avenir', 'light'; cursor:default;"><span style="font-weight:500">AI</span>
+            <span class="intel-CATs">Cloud Computing</span>
+            <span class="intel-CATs">Data Center Solutions</span>
+            <span class="intel-CATs">Enterprise Computing</span>
+            <span class="intel-CATs">IoT</span>
         </p>
         <!-- Modal content -->
         <div class="modal-content">
           <span class="close">x</span>
-
                   <div class="container">
                     <div class="main">
                       <form id="form_id" method="post" name="myform">
-                          <table style="border-collapse:collapse;">
+                          <table style="border-collapse:collapse; padding-top:20%!important;">
                               <tr>
-                                <td style="width:20%; padding-left:2%; font-size:20px; font-weight:bold; color:gray;">
-                                    <a href="https://www.q-cells.us/na/main/products/solar_panels/US_CANADA/residential/residential09.html" title="Q.ANTUM" target="_blank">
-                                        Q.PEAK DUO BLK ML-G9+
+                                <td style="font-size:20px; color:gray; text-align:center; padding-top:3%;">
+                                    <a class="prod-specs" href="https://www.intel.com/content/www/us/en/products/details/processors/xeon/scalable.html" title="" target="_blank">
+                                        Intel Xeon | <span style="color:#BDD0DE;">Scalable</span>
                                     </a>
-                                    <div style="font-size:12px; font-weight:normal;">Rebates and gratis inverters on all system installations.</div>
+                                    <div style="font-size:12px; font-weight:normal; text-shadow:1px 1px 2px lightgray">Platinum</div>
                                 </td>
-                                <td>
+                                <td style="padding:3% 0 0 2%;">
                                     <!-- Username -->
-                                    <input  type="text" name="username" id="username" placeholder="First Name">
+                                    <input  type="text" name="username" id="username" placeholder="First name">
                                 </td>
                               </tr>
                               <tr>
-                                <td style="width:40%;">
-                                  <svg style="position:fixed; height:30%; top:38%;">
+                                <td style="padding-top:3%;">
+                                  <svg style="position:fixed; height:30%; top:38%; filter:drop-shadow(5px 0 2px gray);">
                                       <defs>
                                           <linearGradient id="myGradient"><!--gradientTransform="rotate(90)"-->
-                                            <stop offset="5%"  stop-color="#e8e8e8" />
-                                            <stop offset="95%" stop-color="#3333" />
+                                            <stop offset="5%"  stop-color="#E7EAEC" />
+                                            <stop offset="95%" stop-color="silver" />
                                           </linearGradient>
                                         </defs>
                                     <!-- Module 1-->
-                                    <polygon stroke="none" fill="url('#myGradient')" points="65,10 65,200 155,210 155,0"/>
-                                    <polygon stroke="none" fill="url('#myGradient')" points="155,0 155,211 160,206 160,5"/>
+                                    <polygon stroke="none" fill="url('#myGradient')" points="65,10 65,200 155,210 155,0" style="fill-opacity:100;"/>
+                                    <polygon stroke="none" fill="url('#myGradient')" points="155,0 155,210 160,206 160,5" style="fill-opacity:100;"/>
                                     <!-- Module 2 -->
-                                    <polygon stroke="none" fill="url('#myGradient')" points="120,10 120,200 200,210 200,0"/>
-                                    <polygon stroke="none" fill="url('#myGradient')" points="200,0 200,211 205,206 205,5"/>
+                                    <polygon stroke="none" fill="url('#myGradient')" points="120,10 120,200 200,210 200,0" style="fill-opacity:100;"/>
+                                    <polygon stroke="none" fill="url('#myGradient')" points="200,0 200,210 205,206 205,5" style="fill-opacity:100;"/>
                                     <!-- Module 3-->
-                                    <polygon stroke="none" fill="url('#myGradient')" points="175,10 175,200 255,210 255,0"/>
-                                    <polygon stroke="none" fill="url('#myGradient')" points="255,0 255,211 260,206 260,5"/>
+                                    <polygon stroke="none" fill="url('#myGradient')" points="175,10 175,200 255,210 255,0" style="fill-opacity:100;"/>
+                                    <polygon stroke="none" fill="url('#myGradient')" points="255,0 255,210 260,206 260,5" style="fill-opacity:100;"/>
+                                    <text x="215" y="60" text-anchor="middle" fill="#F7F9FA" font-size="12" transform="rotate(-2,100,100)" style="text-shadow:1px 1px 2px gray">intel</text>
                                   </svg>
                                 </td>
-                                  <td>
+                                <td style="padding:0.3% 0 0 2%;">
                                       <!--  Password -->
-                                      <input type="text" name="LastName" id="username" placeholder="Last Name">
+                                      <input type="text" name="LastName" id="username" placeholder="Last name">
                                   </td>
                               </tr>
                               <tr>
-                                  <td style="width:40%;">&nbsp;</td>
-                                  <td>
+                                  <td style="width:40%; padding-top:3%">&nbsp;</td>
+                                  <td style="padding-left:2%;">
                                       <!-- Username -->
-                                      <input  type="text" name="username" id="username" placeholder="Email Address">
+                                      <input  type="text" name="username" id="username" placeholder="Email address">
                                   </td>
                               </tr>
-                              <tr>
-                                  <td style="width:40%; background: linear-gradient(135deg, #EAF2F8 60%, silver);">&nbsp;</td>
-                                  <td>
+                              <tr><!-- 3G Processor -->
+                                  <td style="border-radius:5px; background: linear-gradient(135deg, #EAF2F8 20%, silver); text-align:center; font-size:12px; padding-top:17%; text-shadow:1px 1px 2px gray">3G Processor</td>
+                                  <td style="padding-left:2%;">
                                       <form action="mailto:luqmalik@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm">
-                                          <input type="text" name="ContactName" placeholder="Telephone Number">
-                                          <div style="margin:2.5% 0 5% 2%;">
-                                              <textarea name="ContactCommentt" rows="6" cols="20" placeholder="System Specifications"></textarea>
-                                              <p style="font-size:10px;"><a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a></p>
+                                          <input type="text" name="ContactName" placeholder="Telephone number">
+                                          <div style="margin:0 0 5% 2.2%;">
+                                              <textarea name="ContactCommentt" rows="6" cols="20" placeholder="Order specifications"></textarea>
+                                              <div style="color:white; font-size:10px; margin:-10px 0 0 0%; text-align:right; padding:0 17% 0 0;">
+                                                  <a class="TCPP" href="">Terms and Conditions</a> | <a class="TCPP" href="">Privacy Policy</a>
+                                              </div>
                                           </div>
                                       </form>
                                   </td>
                               </tr>
                           </table>
-                          <!-- Remember me -->
-                          <div  align="left">
-                            <label  class="checkbox" style="font-size:12px; font-weight:normal; width:6%">
+                          <!-- Remember me | Watters & Francis Index -->
+                          <div  style="margin-top:1.2%; text-align:left;">
+                            <label  class="checkbox" style="font-size:12px; font-weight:normal; width:10%">
                               <input type="checkbox" value="remember-me" id="remember_me">
-                                  <div class="RSSP" title="Track promotions">RSS promos</div>
-                                  <input type="submit" value="Request demo"/>
+                                  <div class="RSSP" title="">W&F Index</div>
+                                  <div style="position:fixed; left:18.1%;">
+                                      <input type="submit" value="Place order"/>
+                                  </div>
                             </label>
                           </div>
-                        <!-- Login -->
-                    
+                          <!-- Product Specifications -->
+                          <div style="text-align:right; margin:0 0 0 45%; font-size:11px; width:40%; background:linear-gradient(to right, rgba(0, 0, 0, 0.005), rgba(0, 0, 0, 0.15)); padding:10px;">
+                              <h7><a class="prod-specs">Product Specifications</a></h7>
+                              <p style="padding-top:1.2%;">
+                                3G Intel<sup>&reg;</sup> Xeon<sup>&reg</sup> Scalable processors offer a balanced architecture that delivers built-in AI acceleration and advanced security capabilities. This allows you to place your workloads where they perform best - from edge to cloud&#9656;
+                              </p>
+                          </div>
                       </form>
                     </div>
                   </div>
-                
           </div>
       </div>
+          <button class="modal-button" href="#myModal2">ENPHASE</button>
+          <!-- The Modal 2-->
+          <div id="myModal2" class="modal">
+              <div class="modal-content">
+                  <div class="container">
+                      <div calss="main">
+                        Enphase
+                      </div>
+                  </div>
+                <span class="close">x</span>
+              </div>
+          </div>
+          
+          <button class="modal-button">Palo Alto Networks</button>
+          <button class="modal-button">IBM</button>
+          <button class="modal-button" href="#myModal3">Norton VPN</button>
+          <!-- The Modal 3-->
+          <div id="myModal3" class="modal">
+              <p align="center" style="color:white; font-family: 'Open Sans', sans-serif; font-size:40px">
+                  <svg width="22" height="22" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                  </svg>norton
+              </p>
+              <p align="center" style="color:#88BCDF; font-family:'Avenir', 'light'; cursor:default;"><span style="font-weight:500">Antivirus</span>
+                  <span class="intel-CATs">Privacy</span>
+                  <span class="intel-CATs">Data Protection</span>
+                  <span class="intel-CATs">Deep Web Security</span>
+                  <span class="intel-CATs">System Monitoring</span>
+              </p>
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">x</span>
+                        <div class="container">
+                          <div class="main">
+                            <form id="form_id" method="post" name="myform">
+                                <table style="border-collapse:collapse;box-shaddow:2px 2px 5px lightgray;">
+                                    <tr>
+                                      <td style="width:20%; font-size:20px; color:gray; text-align:center; padding-top:3%;">
+                                          <a class="prod-specs" href="https://www.intel.com/content/www/us/en/products/details/processors/xeon/scalable.html" title="" target="_blank">
+                                              Norton Secure <span style="color:#BDD0DE;">VPN</span>
+                                          </a>
+                                          <div style="font-size:11px; font-weight:normal; text-shadow:1px 1px 2px lightgray">
+                                              macOS <span id="char-node" style="font-family:uf800">&#63743;</span>
+                                              <span style="padding-left:10px">Windows <i class="fa-brands fa-windows"></i></span>
+                                              <span style="padding-left:10px">Chrome <i class="fa-brands fa-chrome"></i></span>
+                                          </div>
+                                      </td>
+                                      <td style="padding:3% 0 0.2% 2%;">
+                                          <!-- Username -->
+                                          <input  type="text" name="username" id="username" placeholder="First name">
+                                      </td>
+                                    </tr>
+                                    <tr> <!-- Norton Network Graph -->
+                                      <td name="norton_network_graph" style="padding-top:1%;">
+                                          <div name="norton_network_graph" style="float:center;">
+                                            <svg style="height:33; width:300; filter:drop-shadow(2px 0 2px silver);">
+                                              <defs name="ball1">
+                                                <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                                                  <stop offset="0%" style="stop-color:rgb(247, 249, 250);stop-opacity:50" />
+                                                  <stop offset="100%" style="stop-color:rgb(110, 162, 197);stop-opacity:1" />
+                                                </radialGradient>
+                                                <radialGradient id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                                                  <stop offset="0%" style="stop-color:rgb(228, 232, 234);stop-opacity:50" />
+                                                  <stop offset="100%" style="stop-color:rgb(165, 182, 191);stop-opacity:1" />
+                                                </radialGradient>
+                                              </defs>
+                                              <ellipse cx="70" cy="13" rx="20" ry="20" fill="url(#grad1)"/>
+                                              <ellipse cx="270" cy="16.5" rx="16.5" ry="16.5" fill="url(#grad2)"/>
+                                            </svg>
+                                          </div>
+                                      </td>
+                                      <td style="padding:0 0 0.2% 2%;">
+                                            <!--  Password -->
+                                            <input type="text" name="LastName" id="username" placeholder="Last name">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:40%;">
+                                            <div name="norton_network_graph" style="float:center;">
+                                              <svg style="height:30; width:200; filter:drop-shadow(2px 0 2px silver);">
+                                                <defs name="ball1">
+                                                  <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                                                    <stop offset="0%" style="stop-color:rgb(228, 237, 241);stop-opacity:50" />
+                                                    <stop offset="100%" style="stop-color:rgb(120, 172, 207);stop-opacity:1" />
+                                                  </radialGradient>
+                                                </defs>
+                                                <ellipse cx="171" cy="15" rx="15" ry="15" fill="url(#grad1)" />
+                                              </svg>
+                                            </div>
+                                        </td>
+                                        <td style="padding:0 0 0.25% 2%;">
+                                            <!-- Username -->
+                                            <input  type="text" name="username" id="username" placeholder="Email address">
+                                        </td>
+                                    </tr>
+                                    <tr><!-- Material Icon Lock -->
+                                        <td style="border-radius:4px; background: linear-gradient(135deg, #EAF2F8 20%, silver); text-align:center; font-size:15px; text-shadow:1px 1px 2px gray; vertical-align:top;">
+                                            <div name="norton_network_graph" style="float:center;">
+                                              <svg style="height:90; width:200; filter:drop-shadow(2px 0 2px silver);">
+                                                <defs name="ball4">
+                                                  <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                                                    <stop offset="0%" style="stop-color:rgb(237, 242, 244);stop-opacity:50" />
+                                                    <stop offset="100%" style="stop-color:rgb(136, 188, 223);stop-opacity:1" />
+                                                  </radialGradient>
+                                                  <radialGradient id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                                                    <stop offset="0%" style="stop-color:rgb(237, 242, 244);stop-opacity:50" />
+                                                    <stop offset="100%" style="stop-color:rgb(116, 168, 203);stop-opacity:1" />
+                                                  </radialGradient>
+                                                </defs>
+                                                <ellipse cx="165" cy="0" rx="30" ry="30" fill="url(#grad2)"/>
+                                                <ellipse cx="15" cy="50" rx="40" ry="40" fill="url(#grad1)"/>
+                                              </svg>
+                                            </div>
+                                            <span class="material-icons" style="padding-top:30px; font-size:20px;">lock</span>
+                                        </td>
+                                        <td style="padding-left:2%;"><!-- Telephone Number -->
+                                            <form action="mailto:luqmalik@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm">
+                                                <input type="text" name="ContactName" placeholder="Telephone number">
+                                                <div style="margin:0 0 5% 2.2%;">
+                                                    <textarea name="ContactCommentt" rows="6" cols="20" placeholder="Order specifications"></textarea>
+                                                    <div style="color:white; font-size:10px; margin:-10px 0 0 0%; text-align:right; padding:0 17% 0 0;">
+                                                        <a class="TCPP" href="">Terms and Conditions</a> | <a class="TCPP" href="">Privacy Policy</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </table><!-- Connecting Paths -->
+                                <div name="connecting_paths" style="position:fixed; top:31.5%; height:100%;">
+                                    <svg name="edges">
+                                      <line x1="89" y1="56" x2="155" y2="94" stroke="white"/>
+                                      <line x1="254" y1="60" x2="187" y2="98" stroke="white"/>
+<!--                                      <line x1="90" y1="190" x2="155" y2="115" stroke="white"/>-->
+                                      <line x1="238" y1="130" x2="185" y2="106" stroke="white"/>
+                                    </svg>
+                                </div>
+                                <!-- Remember me | Watters & Francis Index -->
+                                <div  style="margin-top:1.2%; text-align:left;">
+                                  <label  class="checkbox" style="font-size:12px; font-weight:normal; width:10%;">
+                                    <input type="checkbox" value="remember-me" id="remember_me">
+                                        <div class="RSSP" title="">W&F Index</div>
+                                        <div style="position:fixed; left:18.1%;">
+                                            <input type="submit" value="Place order"/>
+                                        </div>
+                                  </label>
+                                </div>
+                                <!-- Product Specifications -->
+                                <div style="text-align:right; margin:0 0 0 45%; font-size:11px; width:40%; background:linear-gradient(to right, rgba(0, 0, 0, 0.005), rgba(0, 0, 0, 0.15)); padding:10px;">
+                                    <h7><a class="prod-specs">Specification</a></h7>
+                                    <p style="padding-top:1.2%;">
+                                      Norton Secure VPN<sup>&reg;</sup> &mdash; 1 device annual-plan <strike>USD49.99</strike> 40%&downarrow; USD29.99 1st yr. <br> 1TB cloud storage &mdash; Access to Watters & Francis Index.
+                                    </p>
+                                </div>
+                            </form>
+                          </div>
+                        </div>
+                </div>
+            </div>
+          </div>
+      
+      
+          <button class="modal-button">Apple</button>
+          <button class="modal-button">Wolfram Mathematica</button>
+          <button class="modal-button">AT&T</button>
+          <button class="modal-button">ORACLE</button>
+          <button class="modal-button">Google Workspace</button>
+      
       <!-- ______________________________ JS ____________________________ -->
 
       <script>
-        // Get the modal
-        var modal = document.getElementById('myModal');
+          // Get the button that opens the modal
+          var btn = document.querySelectorAll("button.modal-button");
 
-        // Get the button that opens the modal
-        var btn = document.getElementById("libtn");
+          // All page modals
+          var modals = document.querySelectorAll('.modal');
 
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+          // Get the <span> element that closes the modal
+          var spans = document.getElementsByClassName("close");
 
-        // When the user clicks the button, open the modal
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
+          // When the user clicks the button, open the modal
+          for (var i = 0; i < btn.length; i++) {
+           btn[i].onclick = function(e) {
+              e.preventDefault();
+              modal = document.querySelector(e.target.getAttribute("href"));
+              modal.style.display = "block";
+           }
+          }
 
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
+          // When the user clicks on <span> (x), close the modal
+          for (var i = 0; i < spans.length; i++) {
+           spans[i].onclick = function() {
+              for (var index in modals) {
+                if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
+              }
+           }
+          }
 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+              if (event.target.classList.contains('modal')) {
+               for (var index in modals) {
+                if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
+               }
+              }
+          }
       </script>
 
       <!-- remember me __________________________________________________-->
@@ -481,6 +677,6 @@
       </script>
     </body>
     <div style="position:fixed; bottom:0%; padding:1%; font-size:9px; color:gray;">
-        <footer>Copyright &copy; 2021 Luqman Malik</footer>
+        <footer>Copyright &copy; 2022 Luqman Malik</footer>
     </div>
 </html>
